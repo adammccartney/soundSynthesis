@@ -1,0 +1,2 @@
+@image{harmonicSeries-1}
+@c eof
