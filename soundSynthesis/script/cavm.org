@@ -52,7 +52,7 @@ dac|>        |<adc
 #+END_SRC
 
 
-It might help to think about a patch as a kind of instrument, and these modules as the individual parts of that instrument. Surprisingly, it‘s not always immediately obvious to everyone that a guitar is created by setting together a number of parts like: strings, body, neck, fretboard, bridge, etc. The manner of construction has been informed by the physical principles of acoustics and also the practical necessities of musicians. In this course it will be of huge advantage to you to understand some basic things about acoustics and your own practical needs as a musician. Of course, we won‘t be making guitars, but as I already mentioned, it helps to think about creating electronic music in terms of putting together instruments and using them to create music. 
+It might help to think about a patch as a kind of instrument, and these modules as the individual parts of that instrument. Surprisingly, it‘s not always immediately obvious to everyone that a guitar is created by setting together a number of parts like: strings, body, neck, fret board, bridge, etc. The manner of construction has been informed by the physical principles of acoustics and also the practical necessities of musicians. In this course it will be of huge advantage to you to understand some basic things about acoustics and your own practical needs as a musician. Of course, we won‘t be making guitars, but as I already mentioned, it helps to think about creating electronic music in terms of putting together instruments and using them to create music. 
 
 ** Portability
 The aim of the lectures is to learn the basics of electronic music. In this sense, we focus primarily on the principles and techniques that apply to the creation of electronic music, and secondarily on the learning of paradigm-specific methods.
@@ -70,7 +70,7 @@ Very well written book on modular synthesis, with lots of worthwhile exercises t
 + Allan Strange: *Electronic Music Systems Techniques and Controls*, Wm-C Brown Company Publishers, 1972
 
 * Audio Synthesis
-** Oscillators and Waveforms
+** Oscillators and Wave-forms
 Typically an oscillator will be at the root of a synthesis patch. 
 In order to hear a specific pitch, one can set the oscillator to 
 generate a voltage at the desired frequency.  
@@ -109,15 +109,15 @@ in order to produce a tone.
 #+TBLFM: $3=$2*64
 
 
-+ base frequencey = f_b
++ base frequency = f_b
 + partial number = p_num
 
-To calculate partial frequencies alon the harmonic series:
+To calculate partial frequencies along the harmonic series:
 *f_x = f_b * p_num*
 
 + eg: *f(11) = 11 * 64 = 704*
 
-** A side note on midi to herz conversion
+** A side note on midi to Hertz conversion
 Practically speaking, you will rarely have to think about doing these
 types of conversions from a specific pitch to a midi number. Midi is a
 really useful protocol that maps an equal tempered tuning system to
@@ -130,7 +130,7 @@ integer values in the range of (0-127).
 Of course, a spectrum analysis of the tone produced by a musical
 instrument would reveal the presence of individual frequency
 components. These are basically packets of energy focused around
-certain points in time. Pythagaros or Plato or one of those fellows
+certain points in time. Pythagoras or Plato or one of those fellows
 would have probably started waxing lyrical about the harmony of the
 spheres at this point. 
 The main point here is that you don't need to think too deeply about
@@ -140,10 +140,10 @@ nature of a sound.
 The whole point of mentioning analysis at all is that it can be quite
 useful when used in combination with synthesis. If fact the practice
 of the /analytic-synthetic/ method also goes all the way back to the
-greeks. But that's getting slightly off-topic.   
+Greeks. But that's getting slightly off-topic.   
 
-To summarize about waveforms: depending on how they are combined,
-simple sine-wave components can create more complex wavetypes. The
+To summarize about wave-forms: depending on how they are combined,
+simple sine-wave components can create more complex wave types. The
 tones produced by musical instruments sound themselves complex and can
 be analyzed to reveal the underlying structure. There are a few main
 types of waveform that are typically found as settings on an oscillator.
@@ -153,7 +153,7 @@ types of waveform that are typically found as settings on an oscillator.
 ** Oscillator Controls 
 *** Tuning
 + Offset
-+ Finetune
++ Fine-tune
 
 *** Pitch input
 + Midi
@@ -162,7 +162,7 @@ types of waveform that are typically found as settings on an oscillator.
 *** Frequency Modulation (FM)
 We'll go into some more detail about frequency modulation (and
 modulation in general) later on in the course. It just might be
-useuful to point out that most oscillators will typically have a
+useful to point out that most oscillators will typically have a
 control for FM.
 
 *** Pulse width
@@ -191,17 +191,17 @@ _____| |_________| |_________| |__________
 Very simply put, additive synthesis is the idea of building up complex
 sounds from very, very simply components. Most typically these are sin
 tones. The link above connects to an interesting application written
-in javascript. It's possible to see how the combination of different
-sets of partials can produce specific waveshapes. 
+in JavaScript. It's possible to see how the combination of different
+sets of partials can produce specific wave shapes. 
 
-*** Building a hammond organ
-This series of videos describes how to build a hammond organ style
+*** Building a Hammond organ
+This series of videos describes how to build a Hammond organ style
 synthesizer using vcv rack: https://youtu.be/kZJF50joo2w
 
 
 
 ** Subtractive Synthesis
-*** Sawtooth and Other Complex Waveforms
+*** Saw-tooth and Other Complex Wave forms
 *** Filters
 
 ** Envelopes
@@ -224,7 +224,7 @@ synthesizer using vcv rack: https://youtu.be/kZJF50joo2w
 *** Frequency Modulation (FM)
 *** Amplitude Modulation (AM)
 ** Audio Rate Modulation
-*** Sidebands and Timbre
+*** Side bands and Timbre
 *** FM
 *** AM 
 
