@@ -201,6 +201,11 @@ synthesizer using vcv rack: https://youtu.be/kZJF50joo2w
 
 
 ** Subtractive Synthesis
+
+*** Basic Patch Structur
+[[./basicSubtractive.png]]
+
+
 *** Saw-tooth and Other Complex Wave forms
 *** Filters
 

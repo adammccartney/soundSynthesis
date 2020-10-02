@@ -1,4 +1,4 @@
-% Created 2020-10-01 Thu 09:33
+% Created 2020-10-02 Fri 18:50
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -14,15 +14,14 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
-\author{adam}
 \date{\today}
 \title{}
 \hypersetup{
- pdfauthor={adam},
+ pdfauthor={},
  pdftitle={},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 26.3 (Org mode 9.3.8)}, 
+ pdfcreator={Emacs 27.1 (Org mode 9.3)}, 
  pdflang={English}}
 \begin{document}
 
@@ -31,9 +30,9 @@
 \textbf{Introduction to the subject of electronic music}
 
 \section{Overview}
-\label{sec:orgd493782}
+\label{sec:orgf6382d1}
 \subsection{Course Structure}
-\label{sec:orgb8509e9}
+\label{sec:org8c5408c}
 The lectures are designed as an introduction to Electronic Music,
 Sound Design and Creative Programming. There are 10 dates for lectures
 that  allow us to make this brief introduction. Us refers to the
@@ -54,7 +53,7 @@ oscillators,  filters, amplifiers, sequencers and aspects of control.
 
 
 \subsection{Teaching Philosophy}
-\label{sec:org01a1024}
+\label{sec:org3d407b1}
 The subject can be subdivided into the following categories
 
 \begin{itemize}
@@ -71,7 +70,7 @@ principles of electronic music and also to do this in a way that
 allows  some access to the first principles at the root of design and composition. 
 
 \subsection{A Symbolic Patch Language for Electronic Music}
-\label{sec:org06641b7}
+\label{sec:org15d22e1}
 
 To represent particular concepts, we‘ll be using a graphical patch
 language  throughout the course. It will help to know for now some of
@@ -90,12 +89,12 @@ dac|>        |<adc
 It might help to think about a patch as a kind of instrument, and these modules as the individual parts of that instrument. Surprisingly, it‘s not always immediately obvious to everyone that a guitar is created by setting together a number of parts like: strings, body, neck, fret board, bridge, etc. The manner of construction has been informed by the physical principles of acoustics and also the practical necessities of musicians. In this course it will be of huge advantage to you to understand some basic things about acoustics and your own practical needs as a musician. Of course, we won‘t be making guitars, but as I already mentioned, it helps to think about creating electronic music in terms of putting together instruments and using them to create music. 
 
 \subsection{Portability}
-\label{sec:org4de0f00}
+\label{sec:orgfa39752}
 The aim of the lectures is to learn the basics of electronic music. In this sense, we focus primarily on the principles and techniques that apply to the creation of electronic music, and secondarily on the learning of paradigm-specific methods.
 In any case, basic principles can best be illustrated by practical examples. Sometimes it's easier for me to introduce certain concepts in the classroom with proprietary software. In such cases, the goal should not be to spend all your money on acquiring copies of the software you are using, but to find out how the techniques described can be practiced with freely available software. In the first place, you should use two programs in combination to work through the examples that appear in each lesson and work as homework assignments: VCV Rack and Reaper. 
 
 \subsection{Reading Material}
-\label{sec:org0f0c4a5}
+\label{sec:org39a6ebc}
 
 A very good resource if you want to brush up on some of the basics of the types of mathematics that are found at the root of musical systems
 \begin{itemize}
@@ -113,9 +112,9 @@ Very well written book on modular synthesis, with lots of worthwhile exercises t
 \end{itemize}
 
 \section{Audio Synthesis}
-\label{sec:org94d05d1}
+\label{sec:org5bfddf6}
 \subsection{Oscillators and Wave-forms}
-\label{sec:org731df00}
+\label{sec:org3463fcc}
 Typically an oscillator will be at the root of a synthesis patch. 
 In order to hear a specific pitch, one can set the oscillator to 
 generate a voltage at the desired frequency.  
@@ -123,7 +122,7 @@ Note that there is also a relationship between pitch and perceived
 loudness: a tone played at 1024Hz will sound louder than a tone played with the same gain at 64 Hz.
 
 \subsubsection{Sine Waves and the Harmonic Series}
-\label{sec:org89bd10b}
+\label{sec:org5e071cd}
 Come to think of it, this could be a good time to mention the harmonic
 series, we'll come back to the relationship between pitch and loudness
 in a minute. 
@@ -173,7 +172,7 @@ To calculate partial frequencies along the harmonic series:
 \end{itemize}
 
 \subsection{A side note on midi to Hertz conversion}
-\label{sec:orgd3bc3dc}
+\label{sec:orgf9d3fb7}
 Practically speaking, you will rarely have to think about doing these
 types of conversions from a specific pitch to a midi number. Midi is a
 really useful protocol that maps an equal tempered tuning system to
@@ -181,10 +180,10 @@ integer values in the range of (0-127).
 
 
 \section{Exploring harmonics: \url{https://teropa.info/harmonics-explorer/}}
-\label{sec:orgcac19c9}
+\label{sec:org23bf23b}
 
 \subsection{Waveform Types}
-\label{sec:orge06afa2}
+\label{sec:orgb979c77}
 Of course, a spectrum analysis of the tone produced by a musical
 instrument would reveal the presence of individual frequency
 components. These are basically packets of energy focused around
@@ -211,30 +210,30 @@ types of waveform that are typically found as settings on an oscillator.
 \end{center}
 
 \subsection{Oscillator Controls}
-\label{sec:org2435c6e}
+\label{sec:org5445ad9}
 \subsubsection{Tuning}
-\label{sec:orga202cf7}
+\label{sec:org21b5718}
 \begin{itemize}
 \item Offset
 \item Fine-tune
 \end{itemize}
 
 \subsubsection{Pitch input}
-\label{sec:org5469dfb}
+\label{sec:orge044e3a}
 \begin{itemize}
 \item Midi
 \item Control Voltage
 \end{itemize}
 
 \subsubsection{Frequency Modulation (FM)}
-\label{sec:orgf8e919b}
+\label{sec:org94a0943}
 We'll go into some more detail about frequency modulation (and
 modulation in general) later on in the course. It just might be
 useful to point out that most oscillators will typically have a
 control for FM.
 
 \subsubsection{Pulse width}
-\label{sec:orgd2103d3}
+\label{sec:orgd3411b0}
 On the square wave setting, it is possible to control the length of
 the \emph{duty cycle} of a square wave. Basically, if we were using the
 oscillator to open some sort of a gate, the gate would remain open for
@@ -257,7 +256,7 @@ _____| |_________| |_________| |__________
 \end{verbatim}
 
 \subsection{Additive Synthesis}
-\label{sec:org57d12c4}
+\label{sec:org7e5fd07}
 Very simply put, additive synthesis is the idea of building up complex
 sounds from very, very simply components. Most typically these are sin
 tones. The link above connects to an interesting application written
@@ -265,95 +264,103 @@ in JavaScript. It's possible to see how the combination of different
 sets of partials can produce specific wave shapes. 
 
 \subsubsection{Building a Hammond organ}
-\label{sec:orgbb25ca9}
+\label{sec:org4bc128a}
 This series of videos describes how to build a Hammond organ style
 synthesizer using vcv rack: \url{https://youtu.be/kZJF50joo2w}
 
 
 
 \subsection{Subtractive Synthesis}
-\label{sec:org1b5b522}
+\label{sec:orge2ac10e}
+
+\subsubsection{Basic Patch Structure}
+\label{sec:org2dde1ca}
+\begin{center}
+\includegraphics[width=.9\linewidth]{./basicSubtractive.png}
+\end{center}
+
+
 \subsubsection{Saw-tooth and Other Complex Wave forms}
-\label{sec:org1c3434b}
+\label{sec:org477639e}
 \subsubsection{Filters}
-\label{sec:orgcd68dca}
+\label{sec:orgb0529db}
 
 \subsection{Envelopes}
-\label{sec:orgb27594d}
+\label{sec:org7d91b7e}
 
 
 \section{Musical Signals}
-\label{sec:orgaaa55c9}
+\label{sec:orgcd94544}
 \subsection{Sequencers}
-\label{sec:org86db769}
+\label{sec:orgea6602b}
 \subsubsection{Modular Style}
-\label{sec:org0497573}
+\label{sec:orgbcef44c}
 \subsubsection{DAW Style}
-\label{sec:orge56dfa5}
+\label{sec:orgb2ea4d9}
 \subsection{Quantization}
-\label{sec:org23b4a4f}
+\label{sec:org0b39c33}
 \subsubsection{Pitch Quantization}
-\label{sec:org8eea0ee}
+\label{sec:orga2d8117}
 \subsubsection{Offsets}
-\label{sec:orgfcaf516}
+\label{sec:orgcc9b219}
 \subsubsection{Harmonization}
-\label{sec:org92bd481}
+\label{sec:orgdab15de}
 \subsection{Midi}
-\label{sec:org9bce984}
+\label{sec:org2ea681d}
 \subsubsection{Rhythmic Quantization}
-\label{sec:orge8d2669}
+\label{sec:org62c0e36}
 
 \section{Modulation}
-\label{sec:org6ae6aba}
+\label{sec:org3b363fe}
 \subsection{Sub-Audio Rate Modulation}
-\label{sec:orgb6bf45a}
+\label{sec:org95c2c42}
 \subsubsection{Definition}
-\label{sec:org78f8e2b}
+\label{sec:org2e7b158}
 \subsubsection{Frequency Modulation (FM)}
-\label{sec:org5a09503}
+\label{sec:org7b8ee29}
 \subsubsection{Amplitude Modulation (AM)}
-\label{sec:org6d1f409}
+\label{sec:org17146a7}
 \subsection{Audio Rate Modulation}
-\label{sec:orgf5eb59c}
+\label{sec:orgf3b6611}
 \subsubsection{Side bands and Timbre}
-\label{sec:orgc24984a}
+\label{sec:org067505a}
 \subsubsection{FM}
-\label{sec:org0055191}
+\label{sec:org7f691ff}
 \subsubsection{AM}
-\label{sec:orgf3fe415}
+\label{sec:org511d119}
 
 \section{Parametric Design}
-\label{sec:org01aa9b8}
+\label{sec:org680364a}
 \subsection{A grammar for electronic music}
-\label{sec:orgfa436be}
+\label{sec:org7e12ceb}
 
 \section{DSP}
-\label{sec:orgc979a01}
+\label{sec:orga8c7a81}
 \subsection{Sampling}
-\label{sec:org6b490d5}
+\label{sec:orgaacd2e2}
 \subsection{Effects}
-\label{sec:orgfec9906}
+\label{sec:org8016d9e}
 \subsubsection{Delay}
-\label{sec:orga90ca44}
+\label{sec:org9338ccc}
 \subsubsection{Reverb}
-\label{sec:orga465e2d}
+\label{sec:org25a59c7}
 
 \section{Advanced Synthesis Techniques}
-\label{sec:orgbaa0839}
+\label{sec:org81b6f46}
 \subsection{Physical Modelling}
-\label{sec:orgf4b3a97}
+\label{sec:org80ba26f}
 
 \section{Project work}
-\label{sec:orgfbc2e36}
+\label{sec:org7e1f4ec}
 \subsection{in a DAW}
-\label{sec:orgd224526}
+\label{sec:orgedf7441}
 \subsection{Voice Assignment}
-\label{sec:org9c70960}
+\label{sec:org0ff44a5}
 
 \subsection{Appendix A}
-\label{sec:orge941d6a}
+\label{sec:org9b6a427}
 \subsubsection{Program selection, installation and directory structure}
-\label{sec:org1b13973}
+\label{sec:org2e67cd5}
 \subsubsection{Project organisation in Digital Audio Workstations}
-\label{sec:orgf5e6b04}
+\label{sec:org41c037b}
 \end{document}
