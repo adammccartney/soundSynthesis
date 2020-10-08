@@ -1,0 +1,366 @@
+% Created 2020-10-02 Fri 18:50
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.3)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\textbf{Introduction to the subject of electronic music}
+
+\section{Overview}
+\label{sec:orgdc604f6}
+\subsection{Course Structure}
+\label{sec:orgc85fe07}
+The lectures are designed as an introduction to Electronic Music,
+Sound Design and Creative Programming. There are 10 dates for lectures
+that  allow us to make this brief introduction. Us refers to the
+teachers,  students and me the course lecturer as well as the author
+of these notes.  Throughout the course, an informal and personal way
+of addressing  will be used to explain specific tasks and convey
+information.  This will be familiar to those who have attended
+lectures at the  Vienna Music Institute as well as something new to
+some  who are used to the more formal approach.
+
+One of the key principles we will focus on over the next semester is
+the  idea of ​​parametric design. And, in essence, this series of
+lectures  can be described in detail as a general introduction to some
+basic principles of parametric design. At lecture 5, this topic will
+be  presented in detail, it will be enough for us now and in the
+upcoming  lectures to get to know the individual modules such as
+oscillators,  filters, amplifiers, sequencers and aspects of control. 
+
+
+\subsection{Teaching Philosophy}
+\label{sec:org4946803}
+The subject can be subdivided into the following categories
+
+\begin{itemize}
+\item Project Organisation
+\item Sound Design
+\item Sound Synthesis
+\item Digital Signal Processing (DSP)
+\item Function and algorithm design
+\item Parametric Control
+\end{itemize}
+
+In creating these categories, I’ve tried to represent some of the core
+principles of electronic music and also to do this in a way that
+allows  some access to the first principles at the root of design and composition. 
+
+\subsection{A Symbolic Patch Language for Electronic Music}
+\label{sec:org4957f51}
+
+To represent particular concepts, we‘ll be using a graphical patch
+language  throughout the course. It will help to know for now some of
+the basic elements, objects or modules that we will need to
+represent. 
+
+\begin{verbatim}
+
+[osc]        <amp>        |\env/|        *filt*        °°seq°°        
+
+dac|>        |<adc
+
+\end{verbatim}
+
+
+It might help to think about a patch as a kind of instrument, and these modules as the individual parts of that instrument. Surprisingly, it‘s not always immediately obvious to everyone that a guitar is created by setting together a number of parts like: strings, body, neck, fret board, bridge, etc. The manner of construction has been informed by the physical principles of acoustics and also the practical necessities of musicians. In this course it will be of huge advantage to you to understand some basic things about acoustics and your own practical needs as a musician. Of course, we won‘t be making guitars, but as I already mentioned, it helps to think about creating electronic music in terms of putting together instruments and using them to create music. 
+
+\subsection{Portability}
+\label{sec:org3822bb9}
+The aim of the lectures is to learn the basics of electronic music. In this sense, we focus primarily on the principles and techniques that apply to the creation of electronic music, and secondarily on the learning of paradigm-specific methods.
+In any case, basic principles can best be illustrated by practical examples. Sometimes it's easier for me to introduce certain concepts in the classroom with proprietary software. In such cases, the goal should not be to spend all your money on acquiring copies of the software you are using, but to find out how the techniques described can be practiced with freely available software. In the first place, you should use two programs in combination to work through the examples that appear in each lesson and work as homework assignments: VCV Rack and Reaper. 
+
+\subsection{Reading Material}
+\label{sec:org2c2da25}
+
+A very good resource if you want to brush up on some of the basics of the types of mathematics that are found at the root of musical systems
+\begin{itemize}
+\item Gareth Loy, \textbf{Musimathics vol. I-II}, MIT Press
+\end{itemize}
+
+Great reference for many of the essential topics of computer music
+\begin{itemize}
+\item Curtis Roads: \textbf{The Computer Music Tutorial}, MIT Press
+\end{itemize}
+
+Very well written book on modular synthesis, with lots of worthwhile exercises that will form the basis of our practical work throughout the course
+\begin{itemize}
+\item Allan Strange: \textbf{Electronic Music Systems Techniques and Controls}, Wm-C Brown Company Publishers, 1972
+\end{itemize}
+
+\section{Audio Synthesis}
+\label{sec:org9dd49bf}
+\subsection{Oscillators and Wave-forms}
+\label{sec:org915e087}
+Typically an oscillator will be at the root of a synthesis patch. 
+In order to hear a specific pitch, one can set the oscillator to 
+generate a voltage at the desired frequency.  
+Note that there is also a relationship between pitch and perceived 
+loudness: a tone played at 1024Hz will sound louder than a tone played with the same gain at 64 Hz.
+
+\subsubsection{Sine Waves and the Harmonic Series}
+\label{sec:orgbf2c167}
+Come to think of it, this could be a good time to mention the harmonic
+series, we'll come back to the relationship between pitch and loudness
+in a minute. 
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{./images/Harmonic_Series1.png}
+\end{center}
+
+In the world of synthesizers and especially electronic music, an
+oscillator will typically be looking for a precise definition of pitch
+in order to produce a tone. 
+
+\begin{center}
+\begin{tabular}{lrr}
+Pitch name & partial num. & Frequency (Hz)\\
+\hline
+c, & 1 & 64\\
+c & 2 & 128\\
+g & 3 & 192\\
+c' & 4 & 256\\
+e' & 5 & 320\\
+g' & 6 & 384\\
+bf' & 7 & 448\\
+c'' & 8 & 512\\
+d'' & 9 & 576\\
+e'' & 10 & 640\\
+gf'' & 11 & 704\\
+g'' & 12 & 768\\
+af'' & 13 & 832\\
+bf'' & 14 & 896\\
+b'' & 15 & 960\\
+c''' & 16 & 1024\\
+\end{tabular}
+\end{center}
+
+
+\begin{itemize}
+\item base frequency = f\textsubscript{b}
+\item partial number = p\textsubscript{num}
+\end{itemize}
+
+To calculate partial frequencies along the harmonic series:
+\textbf{f\textsubscript{x} = f\textsubscript{b} * p\textsubscript{num}}
+
+\begin{itemize}
+\item eg: \textbf{f(11) = 11 * 64 = 704}
+\end{itemize}
+
+\subsection{A side note on midi to Hertz conversion}
+\label{sec:orgab40f08}
+Practically speaking, you will rarely have to think about doing these
+types of conversions from a specific pitch to a midi number. Midi is a
+really useful protocol that maps an equal tempered tuning system to
+integer values in the range of (0-127).
+
+
+\section{Exploring harmonics: \url{https://teropa.info/harmonics-explorer/}}
+\label{sec:orgc3b2409}
+
+\subsection{Waveform Types}
+\label{sec:org37db77e}
+Of course, a spectrum analysis of the tone produced by a musical
+instrument would reveal the presence of individual frequency
+components. These are basically packets of energy focused around
+certain points in time. Pythagoras or Plato or one of those fellows
+would have probably started waxing lyrical about the harmony of the
+spheres at this point. 
+The main point here is that you don't need to think too deeply about
+the concept of \emph{spectrum analysis} for now, maybe think about it as a
+type of sonic x-ray that can reveal some interesting truths about the
+nature of a sound. 
+The whole point of mentioning analysis at all is that it can be quite
+useful when used in combination with synthesis. If fact the practice
+of the \emph{analytic-synthetic} method also goes all the way back to the
+Greeks. But that's getting slightly off-topic.   
+
+To summarize about wave-forms: depending on how they are combined,
+simple sine-wave components can create more complex wave types. The
+tones produced by musical instruments sound themselves complex and can
+be analyzed to reveal the underlying structure. There are a few main
+types of waveform that are typically found as settings on an oscillator.
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{./images/waveforms.png}
+\end{center}
+
+\subsection{Oscillator Controls}
+\label{sec:orgecb85b8}
+\subsubsection{Tuning}
+\label{sec:org149b1f4}
+\begin{itemize}
+\item Offset
+\item Fine-tune
+\end{itemize}
+
+\subsubsection{Pitch input}
+\label{sec:orgea04339}
+\begin{itemize}
+\item Midi
+\item Control Voltage
+\end{itemize}
+
+\subsubsection{Frequency Modulation (FM)}
+\label{sec:org9405995}
+We'll go into some more detail about frequency modulation (and
+modulation in general) later on in the course. It just might be
+useful to point out that most oscillators will typically have a
+control for FM.
+
+\subsubsection{Pulse width}
+\label{sec:org2ffd6b3}
+On the square wave setting, it is possible to control the length of
+the \emph{duty cycle} of a square wave. Basically, if we were using the
+oscillator to open some sort of a gate, the gate would remain open for
+the length of time that the square wave is non-zero. 
+
+\begin{verbatim}
+      _____       _____       _____
+     |     |     |     |     |     |
+     |     |     |     |     |     |
+_____|     |_____|     |_____|     |_____
+      ___         ___         ___
+     |   |       |   |       |   |
+     |   |       |   |       |   |
+_____|   |_______|   |_______|   |________
+      _           _           _
+     | |         | |         | |
+     | |         | |         | |
+_____| |_________| |_________| |__________
+
+\end{verbatim}
+
+\subsection{Additive Synthesis}
+\label{sec:org12d65de}
+Very simply put, additive synthesis is the idea of building up complex
+sounds from very, very simply components. Most typically these are sin
+tones. The link above connects to an interesting application written
+in JavaScript. It's possible to see how the combination of different
+sets of partials can produce specific wave shapes. 
+
+\subsubsection{Building a Hammond organ}
+\label{sec:orgbe25069}
+This series of videos describes how to build a Hammond organ style
+synthesizer using vcv rack: \url{https://youtu.be/kZJF50joo2w}
+
+
+
+\subsection{Subtractive Synthesis}
+\label{sec:orgfa832c6}
+
+\subsubsection{Basic Patch Structure}
+\label{sec:orgf86b088}
+\begin{center}
+\includegraphics[width=.9\linewidth]{./basicSubtractive.png}
+\end{center}
+
+
+\subsubsection{Saw-tooth and Other Complex Wave forms}
+\label{sec:orgda33c45}
+\subsubsection{Filters}
+\label{sec:org4064635}
+
+\subsection{Envelopes}
+\label{sec:orgedda64e}
+
+
+\section{Musical Signals}
+\label{sec:org939b52d}
+\subsection{Sequencers}
+\label{sec:org07c52a3}
+\subsubsection{Modular Style}
+\label{sec:org7b831ef}
+\subsubsection{DAW Style}
+\label{sec:org7945b20}
+\subsection{Quantization}
+\label{sec:orgc2b133c}
+\subsubsection{Pitch Quantization}
+\label{sec:org546b27c}
+\subsubsection{Offsets}
+\label{sec:org26d8db9}
+\subsubsection{Harmonization}
+\label{sec:org9cd0cca}
+\subsection{Midi}
+\label{sec:org722798a}
+\subsubsection{Rhythmic Quantization}
+\label{sec:org95a5813}
+
+\section{Modulation}
+\label{sec:orgcdf1962}
+\subsection{Sub-Audio Rate Modulation}
+\label{sec:org5d95357}
+\subsubsection{Definition}
+\label{sec:org627f2f5}
+\subsubsection{Frequency Modulation (FM)}
+\label{sec:orgafec04b}
+\subsubsection{Amplitude Modulation (AM)}
+\label{sec:org35ab7a3}
+\subsection{Audio Rate Modulation}
+\label{sec:org6c0ccce}
+\subsubsection{Side bands and Timbre}
+\label{sec:orgb69070e}
+\subsubsection{FM}
+\label{sec:org16e2bf5}
+\subsubsection{AM}
+\label{sec:org217e6a1}
+
+\section{Parametric Design}
+\label{sec:org7884be1}
+\subsection{A grammar for electronic music}
+\label{sec:org7f52c4f}
+
+\section{DSP}
+\label{sec:orgf10444c}
+\subsection{Sampling}
+\label{sec:org0e57a9e}
+\subsection{Effects}
+\label{sec:orgab422cb}
+\subsubsection{Delay}
+\label{sec:org58a4bfb}
+\subsubsection{Reverb}
+\label{sec:orgfaad548}
+
+\section{Advanced Synthesis Techniques}
+\label{sec:org06ccecc}
+\subsection{Physical Modelling}
+\label{sec:org8631024}
+
+\section{Project work}
+\label{sec:org6109ae1}
+\subsection{in a DAW}
+\label{sec:org82bd158}
+\subsection{Voice Assignment}
+\label{sec:orgfb61b49}
+
+\subsection{Appendix A}
+\label{sec:orgd8ddbd0}
+\subsubsection{Program selection, installation and directory structure}
+\label{sec:org0357314}
+\subsubsection{Project organisation in Digital Audio Workstations}
+\label{sec:org799fba9}
+\end{document}
