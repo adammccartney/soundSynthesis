@@ -155,6 +155,23 @@ types of waveform that are typically found as settings on an oscillator.
 + Offset
 + Fine-tune
 
+Obviously, one of the first steps for most endeavours that involve
+music, one of the first steps is to tune your instruments. Think about
+a band or an orchestra that are going to play a specific melody
+together, the instruments and voices need to all agree upon a specific
+reference pitch and tuning system to play in before they start
+thrashing out melodies and harmonies. 
+
+This example of Ravel's Bolero is sometimes referred to as an example
+of an "additive" musical structure. The way that he chooses to
+orchestrate the melody is by calling for a number of different
+instruments to "double" at different harmonic (as in series)
+intervals. 
+
+#+ATTR_HTML :width 50
+[[file:./images/ravel_bolero.png]]
+
+
 *** Pitch input
 + Midi
 + Control Voltage
