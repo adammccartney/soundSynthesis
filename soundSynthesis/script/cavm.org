@@ -69,7 +69,8 @@ Great reference for many of the essential topics of computer music
 Very well written book on modular synthesis, with lots of worthwhile exercises that will form the basis of our practical work throughout the course
 + Allan Strange: *Electronic Music Systems Techniques and Controls*, Wm-C Brown Company Publishers, 1972
 
-* Audio Synthesis
+
+* Some fundamentals of Audio Synthesis
 ** Oscillators and Wave-forms
 Typically an oscillator will be at the root of a synthesis patch. 
 In order to hear a specific pitch, one can set the oscillator to 
@@ -124,7 +125,12 @@ really useful protocol that maps an equal tempered tuning system to
 integer values in the range of (0-127).
 
 
-* Exploring harmonics: https://teropa.info/harmonics-explorer/
+* Approaches to synthesis
+
+Here is a link to a very interesting website that depicts how the
+basics of additive synthesis work. 
+
+https://teropa.info/harmonics-explorer/
 
 ** Waveform Types
 Of course, a spectrum analysis of the tone produced by a musical
@@ -216,18 +222,96 @@ This series of videos describes how to build a Hammond organ style
 synthesizer using vcv rack: https://youtu.be/kZJF50joo2w
 
 
-
 ** Subtractive Synthesis
+
+****  Envelopes
+In the patch below, we make reference to an "ADSR" envelope for the
+first time. This refers to a transient generator that has four
+components: Attack, Decay, Sustain and Release. Of these four, three
+control temporal aspects of the transient waveform that is produced
+(ADR) and the remaining control for sustain controls the amplitude of
+the waveform after the decay from a peak amplitude is complete. 
 
 *** Basic Patch Structur
 [[./basicSubtractive.png]]
 
 
-*** Saw-tooth and Other Complex Wave forms
-*** Filters
+* Filtering techniques
+There are many interesting and musical ways to use filters in the
+context of modular synthesis. This section briefly outlines some of
+the initial approaches that might be interesting. It is highly
+encouraged to do your own experiments with filters. Some basic initial
+approaches are outlined below and demonstrated in the accompanying
+patches. 
 
-** Envelopes
+** Note on amplifiers and filters
+It's worth pointing out at this point that there is a inverse proportianal
+relationship between loudness and pitch. Basically, as the pitch
+increases, a decrease in gain is necessary in order to maintain the
+same dynamic. The opposite is also true, when lowering the pitch, it
+is important to increase the gain in order to maintain the same
+dynamic level. 
 
+** Low Pass Filters
+Everything above the *cutoff* frequency is filtered out. For most
+musical uses, the filter cutoff will be controlled 
+
+*** Control of Cutoff via Envelope
+This is the case that we documented in the patch /classicSutractive/
+where a single ADSR envelope is used to control the amplitude and
+frequency of the sound. 
+
+*** Control of Cutoff via Offset and Track
+In this case, the filter cutoff is tuned to a particular offset
+value (e.g. 8ve + 5th above root) this ensures that the resultant
+sound has a stable spectrum because it always contains the same
+frequency components. 
+
+In the example /trackingSubtractive/ the VCO is tuned to  261.63 Hz
+while the cutoff of the filter is offset to a value 1.5 times higher
+than this (261.63 * 1.5 = 392.445)
+
+In the patch /lp_integralNoise/ two banks of filters are used. They are
+tuned to a natural harmonic seventh chord (1, 2, 5, 7) partials. The
+resonance on the first bank is turned up to full so that the filters
+go into self oscillation. The second bank receives audio input from a
+white noise source, in order to "fill out" any partials that lie below
+the control signal that is used to change the cutoff frequency.
+
+
+** High Pass Filters
+As you might expect, high pass filters pass all frequencies that exist
+above a certain cutoff. When applied to a single waveform coming from
+an oscillator source, the sound is the quite familiar sweep up the
+overtone series. 
+
+However, when used on multiple simultaneous waveforms, hp filters can
+be a useful way to create new and interesting tone colors that would
+otherwise be difficult to achieve. 
+
+The patch /hp_colorExploration/ contains two oscillators that are
+producing triangle waves tuned to a perfect major third in a low
+register. When we apply a high-pass filter to eliminate the lower
+harmonics, we are left with some uncanny tonal textures. The filter
+cutoff can be changed either manually or automated by using the output
+of a low frequency oscillator (LFO).  
+
+** Band Pass Filters
+Another commonly occuring type of filter is the band pass filter, this
+is basically a combination of lp and hp, so everything but a narrow
+"band" of frequencies in the middle of the spectrum is filtered
+out. There are some really interesting ways to use this technique. 
+
+The patch /bp_colorExploration/ iterates on the previous patch, the
+oscialltors are tuned to a more "stable" perfect fifth and the output
+of the high pass routed into a second low pass filter. This means that
+many of the high end noise that was occurring in the previous examples
+can be filtered out and for a more predictable "harmonic" result.
+
+
+
+
+   
 
 * Musical Signals
 ** Sequencers
