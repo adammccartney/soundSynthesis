@@ -32,7 +32,7 @@
       "params": [
         {
           "id": 0,
-          "value": 1.0
+          "value": 0.0
         },
         {
           "id": 1,
@@ -234,7 +234,7 @@
         },
         {
           "id": 6,
-          "value": 2.99212599
+          "value": 6.37795258
         },
         {
           "id": 7,
@@ -673,6 +673,16 @@
             "paramId": 0
           },
           {
+            "cc": 62,
+            "moduleId": 2,
+            "paramId": 0
+          },
+          {
+            "cc": 62,
+            "moduleId": -1,
+            "paramId": 0
+          },
+          {
             "cc": -1,
             "moduleId": -1,
             "paramId": 0
@@ -680,7 +690,7 @@
         ],
         "midi": {
           "driver": 4,
-          "deviceName": "MIDI Mix 2",
+          "deviceName": "MIDI Mix 0",
           "channel": -1
         }
       },
@@ -864,14 +874,14 @@
           true,
           false,
           true,
+          false,
           true,
           true,
           false,
-          true,
+          false,
           false,
           true,
           false,
-          true,
           false
         ]
       },
