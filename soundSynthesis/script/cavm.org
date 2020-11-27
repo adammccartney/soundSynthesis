@@ -124,7 +124,6 @@ types of conversions from a specific pitch to a midi number. Midi is a
 really useful protocol that maps an equal tempered tuning system to
 integer values in the range of (0-127).
 
-
 * Approaches to synthesis
 
 Here is a link to a very interesting website that depicts how the
@@ -235,7 +234,6 @@ the waveform after the decay from a peak amplitude is complete.
 *** Basic Patch Structur
 [[./basicSubtractive.png]]
 
-
 * Filtering techniques
 There are many interesting and musical ways to use filters in the
 context of modular synthesis. This section briefly outlines some of
@@ -318,9 +316,21 @@ can be filtered out and for a more predictable "harmonic" result.
 
 
    
-
 * Musical Signals
 ** Simple Control of Pitch using LFOs
+LFO = low frequency oscillator
+
+Range of audible frequencies 15 - 20.000Hz -> stuff that can be heard
+as a pitch!
+
+That means anything below 15Hz doesn't sound
+
+*** The value of Hertz
+
+1 Hertz = 1 cycle of a waveform per second
+1 cycle per second = 60 cycles per minute
+Tempo of a 1 Hz LFO = 60 BPM clock
+
 *** Pitch sweep
 This possibly the most simple type of functionality and can be achieved
 pretty easily. Simply connect the output of an LFO to the pitch input
@@ -330,7 +340,6 @@ things to note:
   sweeped, you need to include an attenuator in the signal path
 + The pitches output are unquantized (they don't conform to any
   particular scale)
-
 
 *** Sample & Hold
 The first step towards getting the sort of discrete steps that we
@@ -352,6 +361,7 @@ Some notable features of this pitch.
   possibly be described as a musical signal.
 + With some clever routing of our modules, we can also control other
   aspects of the sound
+
 
 ** Sequencers
 *** Modular Style
@@ -379,6 +389,8 @@ variable length.
 *** Harmonization
 ** Midi
 *** Rhythmic Quantization
+
+
 
 * Modulation
 ** Sub-Audio Rate Modulation
