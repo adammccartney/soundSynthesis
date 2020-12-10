@@ -385,11 +385,40 @@ variable length.
 
 ** Quantization
 *** Pitch Quantization
-*** Offsets
-*** Harmonization
-** Midi
-*** Rhythmic Quantization
 
+Oscillators are outputting an audio signal, the pitch control is
+enabling control over what frequencies are being put out. For all
+intents and purposes this control enables continuous access to all
+pitches along the frequency spectrum. If we don't impose any rounding
+on these values as they come out of the oscillator, we refer to the
+audio signal as unquantized. 
+
+Although obviously it can be applied to pitch very effectively,
+quantization steps can be applied to "CV" signals also. This means
+that you can basically run a control signal through a quantizer in
+order to "whip it into shape" before passing it to the CV input of an
+oscillator. 
+
+*** Offsets & Harmonization
+While we're on the topic of quantization, another cool thing that you
+can do with quantizers is to use them in combination with some
+offsets. 
+Basically, you can take a single cv signal and pass it through an
+offset/attenuator in order to change the range and amplitude of the
+signal. If you pass the offset signal back into a quantizer tuned to
+the same pitches as your second signal, you get instant access to
+diatonic or tonal harmonization. 
+
+One further interesting thing to try out is to further mix the offset
+signal with another signal coming from an LFO. This quickly gives rise
+to many variations on the original seuqence, as it is harder to
+predict exactly how the sequences are related to one another.
+
+*** Clock Subdivision
+In order to have a bit more control over what's coming out of the
+quantizer, it's often useful to use a clock multiplier/divider to
+create a rhythmical relation to the amplitude envelope of your second
+signal. 
 
 
 * Modulation
@@ -397,13 +426,11 @@ variable length.
 *** Definition
 *** Frequency Modulation (FM)
 *** Amplitude Modulation (AM)
+
 ** Audio Rate Modulation
 *** Side bands and Timbre
 *** FM
 *** AM 
-
-* Parametric Design
-** A grammar for electronic music
 
 * DSP 
 ** Sampling
