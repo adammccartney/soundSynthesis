@@ -424,8 +424,30 @@ signal.
 * Modulation
 ** Sub-Audio Rate Modulation
 *** Definition
-*** Frequency Modulation (FM)
+When we're taking about modulation, typically we differentiate between
+two different types of signal that are involved:
+
++ the *carrier* is basically considered the basis for the modulation,
+  the tone that gets manipulated or that "carries" the modulator
++ the *program or modulator* is the signal that is causing some sort of
+  periodic fluctuations to the carrier
+
+If you're using a Low Frequence Oscillator to some how "animate" the
+signal on it's way to becoming audio, you can pretty much consider
+this sub-audio rate modulation. As we've mentioned before, anything
+that occurs below 15hz is below the threshhold for what humans can
+perceive as pitch and so instead we typically here it as rhythm. 
+
 *** Amplitude Modulation (AM)
+If we're using an lfo to do amplitude modulation, then we are
+typically mixing together the signal coming from an LFO with the
+transient that is creating our envelope. This produces a kind of
+"amplitude vibrato" where the volume of the tone seems to flutter. 
+
+*** Frequency Modulation (FM)
+If the carrier is applied to the FM input of the modulator, then the
+audible effects resemble that of a tremolo between two distinct
+pitches.
 
 ** Audio Rate Modulation
 *** Side bands and Timbre
