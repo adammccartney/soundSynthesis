@@ -31,7 +31,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.0
+          "value": 0.59842521
         },
         {
           "id": 1,
@@ -115,19 +115,19 @@
       "params": [
         {
           "id": 0,
-          "value": 0.5
+          "value": 0.55905509
         },
         {
           "id": 1,
-          "value": 0.5
+          "value": 0.708661437
         },
         {
           "id": 2,
-          "value": 0.5
+          "value": 0.125984251
         },
         {
           "id": 3,
-          "value": 0.5
+          "value": 0.858267725
         }
       ],
       "leftModuleId": 2,
@@ -259,7 +259,7 @@
         },
         {
           "id": 2,
-          "value": 2.0629921
+          "value": 4.18897629
         },
         {
           "id": 3,
@@ -335,6 +335,46 @@
             "paramId": 0
           },
           {
+            "cc": 60,
+            "moduleId": 11,
+            "paramId": 0
+          },
+          {
+            "cc": 60,
+            "moduleId": -1,
+            "paramId": 0
+          },
+          {
+            "cc": 56,
+            "moduleId": 11,
+            "paramId": 1
+          },
+          {
+            "cc": 56,
+            "moduleId": -1,
+            "paramId": 0
+          },
+          {
+            "cc": 52,
+            "moduleId": 11,
+            "paramId": 2
+          },
+          {
+            "cc": 52,
+            "moduleId": -1,
+            "paramId": 0
+          },
+          {
+            "cc": 48,
+            "moduleId": 11,
+            "paramId": 3
+          },
+          {
+            "cc": 48,
+            "moduleId": -1,
+            "paramId": 0
+          },
+          {
             "cc": -1,
             "moduleId": -1,
             "paramId": 0
@@ -342,7 +382,7 @@
         ],
         "midi": {
           "driver": 4,
-          "deviceName": "MIDI Mix 0",
+          "deviceName": "MIDI Mix 2",
           "channel": -1
         }
       },
@@ -359,7 +399,7 @@
       "params": [
         {
           "id": 0,
-          "value": 0.212598443
+          "value": 0.307086587
         },
         {
           "id": 1,
@@ -405,11 +445,11 @@
       "params": [
         {
           "id": 0,
-          "value": 2.02011871
+          "value": 4.37424183
         },
         {
           "id": 1,
-          "value": 0.267716527
+          "value": 0.692913413
         },
         {
           "id": 2,
