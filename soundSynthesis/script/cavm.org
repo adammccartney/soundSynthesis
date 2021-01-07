@@ -421,6 +421,14 @@ create a rhythmical relation to the amplitude envelope of your second
 signal. 
 
 
+* Troubleshooting
+
+** Patch description
+
++ We're sending noise to a filter
++ Want to control the filtercutoff with a keyboard
++ We want a pitched noise output
+
 * Modulation
 ** Sub-Audio Rate Modulation
 *** Definition
@@ -454,14 +462,105 @@ pitches.
 *** FM
 *** AM 
 
-* DSP 
-** Sampling
-** Effects
-*** Delay
-*** Reverb
 
-* Advanced Synthesis Techniques
-** Physical Modelling
+
+* Sound Synthesis
+  
+The following is a cherry-pick and very brief exposition of a couple
+of topics related to an area of sound synthesis that I've found
+personally interesting over the years. These topics are all covered in
+excellent detail in Gareth Loy's book Musimathics vol. II. 
+
+** Delay Lines
+Following on from the books disucssion, here are two ways to implement
+a delay line. Although we haven't been worrying about the details of
+implementation throughout this course, it's not a bad idea to
+occasionally point to one or two as if we are serious scholars. As an
+aside, I once submitted PhD application to Trinity College Dublin with
+the glorious notion of writing my dissertation on "something about
+time". If nothing else, this brief discussion of exactly what a delay
+is might serve as a reminder that all of this music stuff seems to
+have something or other to do with time.
+
+*** Mexican Wave
+(The actual example in the book is Bucket Brigate, but I've always
+been a big personal fan of the mexican wave). Imagine that the year is
+1986. The FIFA world cup is on and you have tickets to the final where
+Argentina play against West Germany. At different points during the
+match, the crown begins "passing a wave" around the stadium. The idea
+is that the peak of the wave is passed by one section of the crowd
+standing up and then returning to their seats as the peak moves to the
+next acjacent section.
+[[https://en.wikipedia.org/wiki/File:AUSvIRE4Wave.ogv]]
+
+For the Bucket Brigade or Mexican Wave analogy to work, you have to
+put yourself in the position of imagining that you are the peak of the
+wave travelling around the stadium, you are essentially being passed
+from one section of the crowd to the next.
+
+To bring the anology a bit closer to the computer, imagine the
+sections of the crowd as an array of samples, each time the "wave"
+passes along the array, a sample is moved from one index to the next,
+or from the input stack to the output stack along a FIFO (first in
+first out) queue. This is not to be confused with FIFA of course,
+which stands for the Fédération Internationale de Football Association.
+
+*** In-place method
+The inplace method is the same as above, there is a queue and an input
+and output stack, but this time for the analogy you have to imagine
+yourself as an individual in the crowd. You experience the peak of the
+wave when it passes, and then you have to sit and wait again for n
+seconds for the wave to come around a second time.
+
+*** Echo modelling
+Imagine a signal path: 
+#+begin_src artist
+
+(sound source) -> [ADC] -> [---delay---] -> [DAC] -> |) 
+
+#+end_src
+
+If you place a delay module in the signal path and that delays the 
+sound by /N/ samples. The sound will arrive at the output /N/ seconds
+after the sound has left the input.
+
+*** Screaming into a cave
+At one time or another, we've all screamed into a cave. Not the empty
+cave of our dreams, but a real physical cave with damp, stalactites
+and formerly bears. You may recall that the echo that you hear
+dissipates on it's return. Well, this dissipation is something that we
+can try to model with our syntehsis system in order to recreate an
+accurate sounding audible delay. 
+
+In real world acoustical situations (i.e. a room full of air) the
+pressure of a transverse, spherical waveform drops off at 1/d. That is
+to say the amplitude decreases as the delay time increases. 
+  
+If the delay line is /N/ samples and /T/ seconds long, it's possible
+to model the attenuation of a pressure wave by setting a = 1/(/NT/)
+Intesity (perceived loudness) drops off as d^2, so we can write 
+a = 1/(/NT/)^2
+
+*** Mercilessly skipping ahead to some sound examples
+
+Okay, so real physical situations are a bit more complicated that this
+simple model. Typically if there is a sound source playing in a room,
+the room will give back many more reflections than the sound
+source. This is also true for the bodies of instruments, where tiny
+reflections can give a specific violin, cello, guitar, drum, marimba,
+its own very distinctive quality. There is a whole area of synthesis
+research known as physical modelling, where the various types of delay
+networks are compiled to create many interesting sounds. 
+ 
+** Karplus strong
+Physical modelling synthesis sort of begins though in a very simple
+way, with a type of algorithm known as karplus strong. It's very
+simple infact, all you need is a noise source, an amplifier, a vca and
+an output. By modulating aspects of the delay time and feedback, you
+can recreate the sound of a pitched string.
+
+I've created a patch called "karplus-really-Strong.vcv" to demonstrate
+some of the tecniques mentioned above.
 
 * Project work
 ** in a DAW
