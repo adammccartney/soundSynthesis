@@ -562,6 +562,65 @@ can recreate the sound of a pitched string.
 I've created a patch called "karplus-really-Strong.vcv" to demonstrate
 some of the tecniques mentioned above.
 
+** Reverb (delay in context)
+
+Again, the following sections are largely referring to chapter 9 of
+Musimathics vol. 2 by Gareth Loy, a really excellent resource on this
+topic. 
+
+Now that we've had a chance to look at delay lines and what they are
+all about, let's try to put them in context. Delay lines can be nicely
+framed within the context of hall acoustics or reverb. Essentially,
+simple delay lines can be thought about as the bricks and mortar of
+acoustic spaces (as well as physical models of instruments as we have
+seen with the karplus strong algorithm).
+
+*** Comb filtering (multipath wave propagation)
+Okay, so we're going to do use a couple of the very simple equations
+that are presented in the book to try to model some different types of
+room and instrument setup. For that we're going to use the constant
+value of the speed of sound in air which is 343m/s.
+
+#+Begin_src 
+
+Distance from flute to microphone is sqrt(2)m
+distance from flute to floor and on to microphone 2m
+ 
+Distance of direct path: sqrt(2) ~= 1.414m
+Distance of reflection: (2 - 1.414)m
+
+Duration of the delay: 0.586/343 = 1,708 ms
+
+#+end_src
+
+The sound arriving at the microphone or eardrum will be the result of
+constructive / destructive interference based on the interaction of
+the sounds sinusoidal components. 
+
+This shows us something important about modelling room acoustics: that
+the ratio between the delay lines is important and what ultimately
+determines the color of a specific room.
+
+*** Multitap delay 
+
+The next step is to simply use this model to work with a multitap
+delay. A multitap delay is simply analogous to the sound in most
+natural settings where there are a number of reflective surfaces that
+result in myriad reflections of the sound and ultimately a sort of
+syntehsis occuring at the point of reception / perception (I can't
+think how to best say this ... when it hits your earholes!).
+
+
+primary source: 3m, delay=8.7ms
+
+| reflection | distance | delay (ms) |
+|------------+----------+------------|
+|          1 |        5 |       14.5 |
+|          2 |        8 |       23.3 |
+|          3 |       13 |       37.9 |
+|          4 |       21 |       61.2 |
+
+
 * Project work
 ** in a DAW
 ** Voice Assignment

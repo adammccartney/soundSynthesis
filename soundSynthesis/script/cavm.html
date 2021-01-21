@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-10-09 Fri 10:03 -->
+<!-- 2021-01-08 Fri 09:57 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -245,120 +245,130 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgd0e7708">1. Overview</a>
+<li><a href="#org44eb66c">1. Overview</a>
 <ul>
-<li><a href="#org8ca8715">1.1. Course Structure</a></li>
-<li><a href="#org1adf439">1.2. Teaching Philosophy</a></li>
-<li><a href="#org24f00b1">1.3. A Symbolic Patch Language for Electronic Music</a></li>
-<li><a href="#org6bc888d">1.4. Portability</a></li>
-<li><a href="#org4b0533d">1.5. Reading Material</a></li>
+<li><a href="#org349c103">1.1. Course Structure</a></li>
+<li><a href="#org2915d9d">1.2. Teaching Philosophy</a></li>
+<li><a href="#org0798a1d">1.3. A Symbolic Patch Language for Electronic Music</a></li>
+<li><a href="#org1e3dcf2">1.4. Portability</a></li>
+<li><a href="#org5e1ccb1">1.5. Reading Material</a></li>
 </ul>
 </li>
-<li><a href="#orgf086b0b">2. Audio Synthesis</a>
+<li><a href="#orgc83201e">2. Some fundamentals of Audio Synthesis</a>
 <ul>
-<li><a href="#org07b5e4e">2.1. Oscillators and Wave-forms</a>
+<li><a href="#orge1b1669">2.1. Oscillators and Wave-forms</a>
 <ul>
-<li><a href="#org4818602">2.1.1. Sine Waves and the Harmonic Series</a></li>
+<li><a href="#org2c25f27">2.1.1. Sine Waves and the Harmonic Series</a></li>
 </ul>
 </li>
-<li><a href="#org4f6c72d">2.2. A side note on midi to Hertz conversion</a></li>
+<li><a href="#org4acdb58">2.2. A side note on midi to Hertz conversion</a></li>
 </ul>
 </li>
-<li><a href="#org659d814">3. Exploring harmonics: https://teropa.info/harmonics-explorer/</a>
+<li><a href="#org867d6f8">3. Approaches to synthesis</a>
 <ul>
-<li><a href="#orgf2dc343">3.1. Waveform Types</a></li>
-<li><a href="#orgf51ad09">3.2. Oscillator Controls</a>
+<li><a href="#org5fbc350">3.1. Waveform Types</a></li>
+<li><a href="#org32e7555">3.2. Oscillator Controls</a>
 <ul>
-<li><a href="#orgfd28927">3.2.1. Tuning</a></li>
-<li><a href="#org0c68168">3.2.2. Pitch input</a></li>
-<li><a href="#org3f62e0a">3.2.3. Frequency Modulation (FM)</a></li>
-<li><a href="#orgf364f33">3.2.4. Pulse width</a></li>
+<li><a href="#org02cb4a4">3.2.1. Tuning</a></li>
+<li><a href="#orge85856b">3.2.2. Pitch input</a></li>
+<li><a href="#org3097da1">3.2.3. Frequency Modulation (FM)</a></li>
+<li><a href="#org3bcdaf3">3.2.4. Pulse width</a></li>
 </ul>
 </li>
-<li><a href="#orgf48a603">3.3. Additive Synthesis</a>
+<li><a href="#orgd2b9535">3.3. Additive Synthesis</a>
 <ul>
-<li><a href="#org0fd9b91">3.3.1. Building a Hammond organ</a></li>
+<li><a href="#org37aa19d">3.3.1. Building a Hammond organ</a></li>
 </ul>
 </li>
-<li><a href="#org1881709">3.4. Subtractive Synthesis</a>
+<li><a href="#org80819f5">3.4. Subtractive Synthesis</a>
 <ul>
-<li><a href="#orgf4d11c3">3.4.1. Basic Patch Structur</a></li>
-<li><a href="#org99fc927">3.4.2. Saw-tooth and Other Complex Wave forms</a></li>
-<li><a href="#orgffbd575">3.4.3. Filters</a></li>
-</ul>
-</li>
-<li><a href="#org1d2689e">3.5. Envelopes</a></li>
-</ul>
-</li>
-<li><a href="#orgef1edeb">4. Musical Signals</a>
-<ul>
-<li><a href="#org60ff565">4.1. Sequencers</a>
-<ul>
-<li><a href="#orgc4f1bdf">4.1.1. Modular Style</a></li>
-<li><a href="#orgc972ef5">4.1.2. DAW Style</a></li>
-</ul>
-</li>
-<li><a href="#orga8c91bf">4.2. Quantization</a>
-<ul>
-<li><a href="#orgcff4787">4.2.1. Pitch Quantization</a></li>
-<li><a href="#org6232698">4.2.2. Offsets</a></li>
-<li><a href="#orgb45326e">4.2.3. Harmonization</a></li>
-</ul>
-</li>
-<li><a href="#org26b9084">4.3. Midi</a>
-<ul>
-<li><a href="#org967d909">4.3.1. Rhythmic Quantization</a></li>
+<li><a href="#org0154b0b">3.4.1. Basic Patch Structur</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org994d8f5">5. Modulation</a>
+<li><a href="#orge1bda27">4. Filtering techniques</a>
 <ul>
-<li><a href="#orge944ca2">5.1. Sub-Audio Rate Modulation</a>
+<li><a href="#orgce83774">4.1. Note on amplifiers and filters</a></li>
+<li><a href="#org58ea5b8">4.2. Low Pass Filters</a>
 <ul>
-<li><a href="#org7b0fdd3">5.1.1. Definition</a></li>
-<li><a href="#orgb8f10a4">5.1.2. Frequency Modulation (FM)</a></li>
-<li><a href="#org4384312">5.1.3. Amplitude Modulation (AM)</a></li>
+<li><a href="#org1e78a30">4.2.1. Control of Cutoff via Envelope</a></li>
+<li><a href="#org5371181">4.2.2. Control of Cutoff via Offset and Track</a></li>
 </ul>
 </li>
-<li><a href="#org019d900">5.2. Audio Rate Modulation</a>
+<li><a href="#org1be2e7a">4.3. High Pass Filters</a></li>
+<li><a href="#orgbd4742e">4.4. Band Pass Filters</a></li>
+</ul>
+</li>
+<li><a href="#org31dc101">5. Musical Signals</a>
 <ul>
-<li><a href="#org28753df">5.2.1. Side bands and Timbre</a></li>
-<li><a href="#orgcb97665">5.2.2. FM</a></li>
-<li><a href="#orga490f90">5.2.3. AM</a></li>
+<li><a href="#orgde7c384">5.1. Simple Control of Pitch using LFOs</a>
+<ul>
+<li><a href="#orgf3fd394">5.1.1. The value of Hertz</a></li>
+<li><a href="#orgfd56450">5.1.2. Pitch sweep</a></li>
+<li><a href="#org0d73681">5.1.3. Sample &amp; Hold</a></li>
+</ul>
+</li>
+<li><a href="#orgd97edd8">5.2. Sequencers</a>
+<ul>
+<li><a href="#org0808195">5.2.1. Modular Style</a></li>
+<li><a href="#org5b8ab74">5.2.2. DAW Style</a></li>
+</ul>
+</li>
+<li><a href="#org1899a16">5.3. Quantization</a>
+<ul>
+<li><a href="#orgfeeac1b">5.3.1. Pitch Quantization</a></li>
+<li><a href="#orgd353dd3">5.3.2. Offsets &amp; Harmonization</a></li>
+<li><a href="#org02d348e">5.3.3. Clock Subdivision</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org7ede6e9">6. Parametric Design</a>
+<li><a href="#org3f095a3">6. Troubleshooting</a>
 <ul>
-<li><a href="#org1b0eb0e">6.1. A grammar for electronic music</a></li>
+<li><a href="#orgf345442">6.1. Patch description</a></li>
 </ul>
 </li>
-<li><a href="#org3ed8b8b">7. DSP</a>
+<li><a href="#org2be6a2a">7. Modulation</a>
 <ul>
-<li><a href="#orgb0cfae0">7.1. Sampling</a></li>
-<li><a href="#org14d8f4d">7.2. Effects</a>
+<li><a href="#org21f0b55">7.1. Sub-Audio Rate Modulation</a>
 <ul>
-<li><a href="#orgbdc5fbc">7.2.1. Delay</a></li>
-<li><a href="#org03d3a81">7.2.2. Reverb</a></li>
+<li><a href="#orgcd615e6">7.1.1. Definition</a></li>
+<li><a href="#orga6a4ef1">7.1.2. Amplitude Modulation (AM)</a></li>
+<li><a href="#orgc0965fa">7.1.3. Frequency Modulation (FM)</a></li>
+</ul>
+</li>
+<li><a href="#orgf40633f">7.2. Audio Rate Modulation</a>
+<ul>
+<li><a href="#org920c205">7.2.1. Side bands and Timbre</a></li>
+<li><a href="#org29a8127">7.2.2. FM</a></li>
+<li><a href="#org3558fbf">7.2.3. AM</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org54deafd">8. Advanced Synthesis Techniques</a>
+<li><a href="#orga94f6a9">8. Sound Synthesis</a>
 <ul>
-<li><a href="#org77ca062">8.1. Physical Modelling</a></li>
+<li><a href="#org601a6b7">8.1. Delay Lines</a>
+<ul>
+<li><a href="#org0bb0e67">8.1.1. Mexican Wave</a></li>
+<li><a href="#org80195ff">8.1.2. In-place method</a></li>
+<li><a href="#orgff769f1">8.1.3. Echo modelling</a></li>
+<li><a href="#orgcf3f31b">8.1.4. Screaming into a cave</a></li>
+<li><a href="#org98efea8">8.1.5. Mercilessly skipping ahead to some sound examples</a></li>
 </ul>
 </li>
-<li><a href="#orgc0f962c">9. Project work</a>
+<li><a href="#org9aac35a">8.2. Karplus strong</a></li>
+</ul>
+</li>
+<li><a href="#orgc243089">9. Project work</a>
 <ul>
-<li><a href="#orgaa87546">9.1. in a DAW</a></li>
-<li><a href="#org1299a3d">9.2. Voice Assignment</a></li>
-<li><a href="#orgd69dc36">9.3. Appendix A</a>
+<li><a href="#org6ec76ad">9.1. in a DAW</a></li>
+<li><a href="#org5b100aa">9.2. Voice Assignment</a></li>
+<li><a href="#orgaf2877e">9.3. Appendix A</a>
 <ul>
-<li><a href="#orga2dd102">9.3.1. Program selection, installation and directory structure</a></li>
-<li><a href="#org944c9e7">9.3.2. Project organisation in Digital Audio Workstations</a></li>
+<li><a href="#orgc2fd041">9.3.1. Program selection, installation and directory structure</a></li>
+<li><a href="#orgb2a5ab6">9.3.2. Project organisation in Digital Audio Workstations</a></li>
 </ul>
 </li>
 </ul>
@@ -370,12 +380,12 @@ for the JavaScript code in this tag.
 <b>Introduction to the subject of electronic music</b>
 </p>
 
-<div id="outline-container-orgd0e7708" class="outline-2">
-<h2 id="orgd0e7708"><span class="section-number-2">1</span> Overview</h2>
+<div id="outline-container-org44eb66c" class="outline-2">
+<h2 id="org44eb66c"><span class="section-number-2">1</span> Overview</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org8ca8715" class="outline-3">
-<h3 id="org8ca8715"><span class="section-number-3">1.1</span> Course Structure</h3>
+<div id="outline-container-org349c103" class="outline-3">
+<h3 id="org349c103"><span class="section-number-3">1.1</span> Course Structure</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 The lectures are designed as an introduction to Electronic Music,
@@ -402,8 +412,8 @@ oscillators,  filters, amplifiers, sequencers and aspects of control.
 </div>
 
 
-<div id="outline-container-org1adf439" class="outline-3">
-<h3 id="org1adf439"><span class="section-number-3">1.2</span> Teaching Philosophy</h3>
+<div id="outline-container-org2915d9d" class="outline-3">
+<h3 id="org2915d9d"><span class="section-number-3">1.2</span> Teaching Philosophy</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 The subject can be subdivided into the following categories
@@ -426,8 +436,8 @@ allows  some access to the first principles at the root of design and compositio
 </div>
 </div>
 
-<div id="outline-container-org24f00b1" class="outline-3">
-<h3 id="org24f00b1"><span class="section-number-3">1.3</span> A Symbolic Patch Language for Electronic Music</h3>
+<div id="outline-container-org0798a1d" class="outline-3">
+<h3 id="org0798a1d"><span class="section-number-3">1.3</span> A Symbolic Patch Language for Electronic Music</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 To represent particular concepts, we‘ll be using a graphical patch
@@ -452,8 +462,8 @@ It might help to think about a patch as a kind of instrument, and these modules 
 </div>
 </div>
 
-<div id="outline-container-org6bc888d" class="outline-3">
-<h3 id="org6bc888d"><span class="section-number-3">1.4</span> Portability</h3>
+<div id="outline-container-org1e3dcf2" class="outline-3">
+<h3 id="org1e3dcf2"><span class="section-number-3">1.4</span> Portability</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 The aim of the lectures is to learn the basics of electronic music. In this sense, we focus primarily on the principles and techniques that apply to the creation of electronic music, and secondarily on the learning of paradigm-specific methods.
@@ -462,8 +472,8 @@ In any case, basic principles can best be illustrated by practical examples. Som
 </div>
 </div>
 
-<div id="outline-container-org4b0533d" class="outline-3">
-<h3 id="org4b0533d"><span class="section-number-3">1.5</span> Reading Material</h3>
+<div id="outline-container-org5e1ccb1" class="outline-3">
+<h3 id="org5e1ccb1"><span class="section-number-3">1.5</span> Reading Material</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 A very good resource if you want to brush up on some of the basics of the types of mathematics that are found at the root of musical systems
@@ -489,12 +499,13 @@ Very well written book on modular synthesis, with lots of worthwhile exercises t
 </div>
 </div>
 
-<div id="outline-container-orgf086b0b" class="outline-2">
-<h2 id="orgf086b0b"><span class="section-number-2">2</span> Audio Synthesis</h2>
+
+<div id="outline-container-orgc83201e" class="outline-2">
+<h2 id="orgc83201e"><span class="section-number-2">2</span> Some fundamentals of Audio Synthesis</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org07b5e4e" class="outline-3">
-<h3 id="org07b5e4e"><span class="section-number-3">2.1</span> Oscillators and Wave-forms</h3>
+<div id="outline-container-orge1b1669" class="outline-3">
+<h3 id="orge1b1669"><span class="section-number-3">2.1</span> Oscillators and Wave-forms</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Typically an oscillator will be at the root of a synthesis patch. 
@@ -505,8 +516,8 @@ loudness: a tone played at 1024Hz will sound louder than a tone played with the 
 </p>
 </div>
 
-<div id="outline-container-org4818602" class="outline-4">
-<h4 id="org4818602"><span class="section-number-4">2.1.1</span> Sine Waves and the Harmonic Series</h4>
+<div id="outline-container-org2c25f27" class="outline-4">
+<h4 id="org2c25f27"><span class="section-number-4">2.1.1</span> Sine Waves and the Harmonic Series</h4>
 <div class="outline-text-4" id="text-2-1-1">
 <p>
 Come to think of it, this could be a good time to mention the harmonic
@@ -660,8 +671,8 @@ To calculate partial frequencies along the harmonic series:
 </div>
 </div>
 
-<div id="outline-container-org4f6c72d" class="outline-3">
-<h3 id="org4f6c72d"><span class="section-number-3">2.2</span> A side note on midi to Hertz conversion</h3>
+<div id="outline-container-org4acdb58" class="outline-3">
+<h3 id="org4acdb58"><span class="section-number-3">2.2</span> A side note on midi to Hertz conversion</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Practically speaking, you will rarely have to think about doing these
@@ -673,13 +684,21 @@ integer values in the range of (0-127).
 </div>
 </div>
 
-
-<div id="outline-container-org659d814" class="outline-2">
-<h2 id="org659d814"><span class="section-number-2">3</span> Exploring harmonics: <a href="https://teropa.info/harmonics-explorer/">https://teropa.info/harmonics-explorer/</a></h2>
+<div id="outline-container-org867d6f8" class="outline-2">
+<h2 id="org867d6f8"><span class="section-number-2">3</span> Approaches to synthesis</h2>
 <div class="outline-text-2" id="text-3">
+<p>
+Here is a link to a very interesting website that depicts how the
+basics of additive synthesis work. 
+</p>
+
+<p>
+<a href="https://teropa.info/harmonics-explorer/">https://teropa.info/harmonics-explorer/</a>
+</p>
 </div>
-<div id="outline-container-orgf2dc343" class="outline-3">
-<h3 id="orgf2dc343"><span class="section-number-3">3.1</span> Waveform Types</h3>
+
+<div id="outline-container-org5fbc350" class="outline-3">
+<h3 id="org5fbc350"><span class="section-number-3">3.1</span> Waveform Types</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Of course, a spectrum analysis of the tone produced by a musical
@@ -714,12 +733,12 @@ types of waveform that are typically found as settings on an oscillator.
 </div>
 </div>
 
-<div id="outline-container-orgf51ad09" class="outline-3">
-<h3 id="orgf51ad09"><span class="section-number-3">3.2</span> Oscillator Controls</h3>
+<div id="outline-container-org32e7555" class="outline-3">
+<h3 id="org32e7555"><span class="section-number-3">3.2</span> Oscillator Controls</h3>
 <div class="outline-text-3" id="text-3-2">
 </div>
-<div id="outline-container-orgfd28927" class="outline-4">
-<h4 id="orgfd28927"><span class="section-number-4">3.2.1</span> Tuning</h4>
+<div id="outline-container-org02cb4a4" class="outline-4">
+<h4 id="org02cb4a4"><span class="section-number-4">3.2.1</span> Tuning</h4>
 <div class="outline-text-4" id="text-3-2-1">
 <ul class="org-ul">
 <li>Offset</li>
@@ -751,8 +770,8 @@ intervals.
 </div>
 
 
-<div id="outline-container-org0c68168" class="outline-4">
-<h4 id="org0c68168"><span class="section-number-4">3.2.2</span> Pitch input</h4>
+<div id="outline-container-orge85856b" class="outline-4">
+<h4 id="orge85856b"><span class="section-number-4">3.2.2</span> Pitch input</h4>
 <div class="outline-text-4" id="text-3-2-2">
 <ul class="org-ul">
 <li>Midi</li>
@@ -761,8 +780,8 @@ intervals.
 </div>
 </div>
 
-<div id="outline-container-org3f62e0a" class="outline-4">
-<h4 id="org3f62e0a"><span class="section-number-4">3.2.3</span> Frequency Modulation (FM)</h4>
+<div id="outline-container-org3097da1" class="outline-4">
+<h4 id="org3097da1"><span class="section-number-4">3.2.3</span> Frequency Modulation (FM)</h4>
 <div class="outline-text-4" id="text-3-2-3">
 <p>
 We'll go into some more detail about frequency modulation (and
@@ -773,8 +792,8 @@ control for FM.
 </div>
 </div>
 
-<div id="outline-container-orgf364f33" class="outline-4">
-<h4 id="orgf364f33"><span class="section-number-4">3.2.4</span> Pulse width</h4>
+<div id="outline-container-org3bcdaf3" class="outline-4">
+<h4 id="org3bcdaf3"><span class="section-number-4">3.2.4</span> Pulse width</h4>
 <div class="outline-text-4" id="text-3-2-4">
 <p>
 On the square wave setting, it is possible to control the length of
@@ -803,8 +822,8 @@ _____| |_________| |_________| |__________
 </div>
 </div>
 
-<div id="outline-container-orgf48a603" class="outline-3">
-<h3 id="orgf48a603"><span class="section-number-3">3.3</span> Additive Synthesis</h3>
+<div id="outline-container-orgd2b9535" class="outline-3">
+<h3 id="orgd2b9535"><span class="section-number-3">3.3</span> Additive Synthesis</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 Very simply put, additive synthesis is the idea of building up complex
@@ -815,8 +834,8 @@ sets of partials can produce specific wave shapes.
 </p>
 </div>
 
-<div id="outline-container-org0fd9b91" class="outline-4">
-<h4 id="org0fd9b91"><span class="section-number-4">3.3.1</span> Building a Hammond organ</h4>
+<div id="outline-container-org37aa19d" class="outline-4">
+<h4 id="org37aa19d"><span class="section-number-4">3.3.1</span> Building a Hammond organ</h4>
 <div class="outline-text-4" id="text-3-3-1">
 <p>
 This series of videos describes how to build a Hammond organ style
@@ -827,13 +846,27 @@ synthesizer using vcv rack: <a href="https://youtu.be/kZJF50joo2w">https://youtu
 </div>
 
 
-
-<div id="outline-container-org1881709" class="outline-3">
-<h3 id="org1881709"><span class="section-number-3">3.4</span> Subtractive Synthesis</h3>
+<div id="outline-container-org80819f5" class="outline-3">
+<h3 id="org80819f5"><span class="section-number-3">3.4</span> Subtractive Synthesis</h3>
 <div class="outline-text-3" id="text-3-4">
 </div>
-<div id="outline-container-orgf4d11c3" class="outline-4">
-<h4 id="orgf4d11c3"><span class="section-number-4">3.4.1</span> Basic Patch Structur</h4>
+<ol class="org-ol">
+<li><a id="org7e19db0"></a>Envelopes<br />
+<div class="outline-text-5" id="text-3-4-0-1">
+<p>
+In the patch below, we make reference to an "ADSR" envelope for the
+first time. This refers to a transient generator that has four
+components: Attack, Decay, Sustain and Release. Of these four, three
+control temporal aspects of the transient waveform that is produced
+(ADR) and the remaining control for sustain controls the amplitude of
+the waveform after the decay from a peak amplitude is complete. 
+</p>
+</div>
+</li>
+</ol>
+
+<div id="outline-container-org0154b0b" class="outline-4">
+<h4 id="org0154b0b"><span class="section-number-4">3.4.1</span> Basic Patch Structur</h4>
 <div class="outline-text-4" id="text-3-4-1">
 
 <div class="figure">
@@ -842,159 +875,606 @@ synthesizer using vcv rack: <a href="https://youtu.be/kZJF50joo2w">https://youtu
 </div>
 </div>
 </div>
-
-
-<div id="outline-container-org99fc927" class="outline-4">
-<h4 id="org99fc927"><span class="section-number-4">3.4.2</span> Saw-tooth and Other Complex Wave forms</h4>
-</div>
-<div id="outline-container-orgffbd575" class="outline-4">
-<h4 id="orgffbd575"><span class="section-number-4">3.4.3</span> Filters</h4>
 </div>
 </div>
 
-<div id="outline-container-org1d2689e" class="outline-3">
-<h3 id="org1d2689e"><span class="section-number-3">3.5</span> Envelopes</h3>
-</div>
-</div>
-
-
-<div id="outline-container-orgef1edeb" class="outline-2">
-<h2 id="orgef1edeb"><span class="section-number-2">4</span> Musical Signals</h2>
+<div id="outline-container-orge1bda27" class="outline-2">
+<h2 id="orge1bda27"><span class="section-number-2">4</span> Filtering techniques</h2>
 <div class="outline-text-2" id="text-4">
+<p>
+There are many interesting and musical ways to use filters in the
+context of modular synthesis. This section briefly outlines some of
+the initial approaches that might be interesting. It is highly
+encouraged to do your own experiments with filters. Some basic initial
+approaches are outlined below and demonstrated in the accompanying
+patches. 
+</p>
 </div>
-<div id="outline-container-org60ff565" class="outline-3">
-<h3 id="org60ff565"><span class="section-number-3">4.1</span> Sequencers</h3>
+
+<div id="outline-container-orgce83774" class="outline-3">
+<h3 id="orgce83774"><span class="section-number-3">4.1</span> Note on amplifiers and filters</h3>
 <div class="outline-text-3" id="text-4-1">
+<p>
+It's worth pointing out at this point that there is a inverse proportianal
+relationship between loudness and pitch. Basically, as the pitch
+increases, a decrease in gain is necessary in order to maintain the
+same dynamic. The opposite is also true, when lowering the pitch, it
+is important to increase the gain in order to maintain the same
+dynamic level. 
+</p>
+
+<p>
+Another thing that's worth mentioning is that it's useful to think of
+a filter as basically a very specific type of amplifier i.e. one that
+selectively amplifies components of a signal depending on the settings
+that are "programmed" in by the user / sound designer or audio
+developer. The specific "type" of filter (LP/HP/BP&#x2026;) determines to a
+large degree what specific functionality is available. 
+</p>
 </div>
-<div id="outline-container-orgc4f1bdf" class="outline-4">
-<h4 id="orgc4f1bdf"><span class="section-number-4">4.1.1</span> Modular Style</h4>
 </div>
-<div id="outline-container-orgc972ef5" class="outline-4">
-<h4 id="orgc972ef5"><span class="section-number-4">4.1.2</span> DAW Style</h4>
-</div>
-</div>
-<div id="outline-container-orga8c91bf" class="outline-3">
-<h3 id="orga8c91bf"><span class="section-number-3">4.2</span> Quantization</h3>
+
+<div id="outline-container-org58ea5b8" class="outline-3">
+<h3 id="org58ea5b8"><span class="section-number-3">4.2</span> Low Pass Filters</h3>
 <div class="outline-text-3" id="text-4-2">
+<p>
+Everything above the <b>cutoff</b> frequency is filtered out. For most
+musical uses, the filter cutoff will be controlled 
+</p>
 </div>
-<div id="outline-container-orgcff4787" class="outline-4">
-<h4 id="orgcff4787"><span class="section-number-4">4.2.1</span> Pitch Quantization</h4>
+
+<div id="outline-container-org1e78a30" class="outline-4">
+<h4 id="org1e78a30"><span class="section-number-4">4.2.1</span> Control of Cutoff via Envelope</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<p>
+This is the case that we documented in the patch <i>classicSutractive</i>
+where a single ADSR envelope is used to control the amplitude and
+frequency of the sound. 
+</p>
 </div>
-<div id="outline-container-org6232698" class="outline-4">
-<h4 id="org6232698"><span class="section-number-4">4.2.2</span> Offsets</h4>
 </div>
-<div id="outline-container-orgb45326e" class="outline-4">
-<h4 id="orgb45326e"><span class="section-number-4">4.2.3</span> Harmonization</h4>
-</div>
-</div>
-<div id="outline-container-org26b9084" class="outline-3">
-<h3 id="org26b9084"><span class="section-number-3">4.3</span> Midi</h3>
-<div class="outline-text-3" id="text-4-3">
-</div>
-<div id="outline-container-org967d909" class="outline-4">
-<h4 id="org967d909"><span class="section-number-4">4.3.1</span> Rhythmic Quantization</h4>
+
+<div id="outline-container-org5371181" class="outline-4">
+<h4 id="org5371181"><span class="section-number-4">4.2.2</span> Control of Cutoff via Offset and Track</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<p>
+In this case, the filter cutoff is tuned to a particular offset
+value (e.g. 8ve + 5th above root) this ensures that the resultant
+sound has a stable spectrum because it always contains the same
+frequency components. 
+</p>
+
+<p>
+In the example <i>trackingSubtractive</i> the VCO is tuned to  261.63 Hz
+while the cutoff of the filter is offset to a value 1.5 times higher
+than this (261.63 * 1.5 = 392.445)
+</p>
+
+<p>
+In the patch <i>lp<sub>integralNoise</sub></i> two banks of filters are used. They are
+tuned to a natural harmonic seventh chord (1, 2, 5, 7) partials. The
+resonance on the first bank is turned up to full so that the filters
+go into self oscillation. The second bank receives audio input from a
+white noise source, in order to "fill out" any partials that lie below
+the control signal that is used to change the cutoff frequency.
+</p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org994d8f5" class="outline-2">
-<h2 id="org994d8f5"><span class="section-number-2">5</span> Modulation</h2>
+<div id="outline-container-org1be2e7a" class="outline-3">
+<h3 id="org1be2e7a"><span class="section-number-3">4.3</span> High Pass Filters</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+As you might expect, high pass filters pass all frequencies that exist
+above a certain cutoff. When applied to a single waveform coming from
+an oscillator source, the sound is the quite familiar sweep up the
+overtone series. 
+</p>
+
+<p>
+However, when used on multiple simultaneous waveforms, hp filters can
+be a useful way to create new and interesting tone colors that would
+otherwise be difficult to achieve. 
+</p>
+
+<p>
+The patch <i>hp<sub>colorExploration</sub></i> contains two oscillators that are
+producing triangle waves tuned to a perfect major third in a low
+register. When we apply a high-pass filter to eliminate the lower
+harmonics, we are left with some uncanny tonal textures. The filter
+cutoff can be changed either manually or automated by using the output
+of a low frequency oscillator (LFO).  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbd4742e" class="outline-3">
+<h3 id="orgbd4742e"><span class="section-number-3">4.4</span> Band Pass Filters</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+Another commonly occuring type of filter is the band pass filter, this
+is basically a combination of lp and hp, so everything but a narrow
+"band" of frequencies in the middle of the spectrum is filtered
+out. There are some really interesting ways to use this technique. 
+</p>
+
+<p>
+The patch <i>bp<sub>colorExploration</sub></i> iterates on the previous patch, the
+oscialltors are tuned to a more "stable" perfect fifth and the output
+of the high pass routed into a second low pass filter. This means that
+many of the high end noise that was occurring in the previous examples
+can be filtered out and for a more predictable "harmonic" result.
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div id="outline-container-org31dc101" class="outline-2">
+<h2 id="org31dc101"><span class="section-number-2">5</span> Musical Signals</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-orge944ca2" class="outline-3">
-<h3 id="orge944ca2"><span class="section-number-3">5.1</span> Sub-Audio Rate Modulation</h3>
+<div id="outline-container-orgde7c384" class="outline-3">
+<h3 id="orgde7c384"><span class="section-number-3">5.1</span> Simple Control of Pitch using LFOs</h3>
 <div class="outline-text-3" id="text-5-1">
+<p>
+LFO = low frequency oscillator
+</p>
+
+<p>
+Range of audible frequencies 15 - 20.000Hz -&gt; stuff that can be heard
+as a pitch!
+</p>
+
+<p>
+That means anything below 15Hz doesn't sound
+</p>
 </div>
-<div id="outline-container-org7b0fdd3" class="outline-4">
-<h4 id="org7b0fdd3"><span class="section-number-4">5.1.1</span> Definition</h4>
+
+<div id="outline-container-orgf3fd394" class="outline-4">
+<h4 id="orgf3fd394"><span class="section-number-4">5.1.1</span> The value of Hertz</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<p>
+1 Hertz = 1 cycle of a waveform per second
+1 cycle per second = 60 cycles per minute
+Tempo of a 1 Hz LFO = 60 BPM clock
+</p>
 </div>
-<div id="outline-container-orgb8f10a4" class="outline-4">
-<h4 id="orgb8f10a4"><span class="section-number-4">5.1.2</span> Frequency Modulation (FM)</h4>
 </div>
-<div id="outline-container-org4384312" class="outline-4">
-<h4 id="org4384312"><span class="section-number-4">5.1.3</span> Amplitude Modulation (AM)</h4>
+
+<div id="outline-container-orgfd56450" class="outline-4">
+<h4 id="orgfd56450"><span class="section-number-4">5.1.2</span> Pitch sweep</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<p>
+This possibly the most simple type of functionality and can be achieved
+pretty easily. Simply connect the output of an LFO to the pitch input
+of an oscillator that is tuned to sound at audio rate. There are a few
+things to note:
+</p>
+<ul class="org-ul">
+<li>If you want to have control over the range of pitch that gets
+sweeped, you need to include an attenuator in the signal path</li>
+<li>The pitches output are unquantized (they don't conform to any
+particular scale)</li>
+</ul>
 </div>
 </div>
-<div id="outline-container-org019d900" class="outline-3">
-<h3 id="org019d900"><span class="section-number-3">5.2</span> Audio Rate Modulation</h3>
+
+<div id="outline-container-org0d73681" class="outline-4">
+<h4 id="org0d73681"><span class="section-number-4">5.1.3</span> Sample &amp; Hold</h4>
+<div class="outline-text-4" id="text-5-1-3">
+<p>
+The first step towards getting the sort of discrete steps that we
+would need to make up a musical scale is isolating individual pitches
+within the context of our filter sweep, and ensuring that the control
+signal ("CV") stays at one specific pitch long enough for us to
+perceive it as a note. See the patch "sampleHold1.vcv" for details on
+how to patch this up.
+In this patch we are introducing the "Random" module, an interesting
+base module in the VCV suite. It is programmed to generate random
+values along one of two possible distriubutions. These random voltages
+are sampled according to the rate function, and they can be further
+divided up into a maximum of 16 steps using the "shape" slider. It's a
+useful module and I highly recommend reading the short documentation
+to get a better understanding of what it does. 
+</p>
+
+<p>
+Some notable features of this pitch. 
+</p>
+<ul class="org-ul">
+<li>At this stage, we might seem to be approaching something that could
+possibly be described as a musical signal.</li>
+<li>With some clever routing of our modules, we can also control other
+aspects of the sound</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgd97edd8" class="outline-3">
+<h3 id="orgd97edd8"><span class="section-number-3">5.2</span> Sequencers</h3>
 <div class="outline-text-3" id="text-5-2">
 </div>
-<div id="outline-container-org28753df" class="outline-4">
-<h4 id="org28753df"><span class="section-number-4">5.2.1</span> Side bands and Timbre</h4>
+<div id="outline-container-org0808195" class="outline-4">
+<h4 id="org0808195"><span class="section-number-4">5.2.1</span> Modular Style</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<p>
+The most typical style of sequencer found in modular systems are those
+with rows of pots (basically potentiometers) that are used to regulte
+the outgoing cv. There is either an internal clock that powers the
+steps, or the sequencer is fed in a clock pulse from an external
+source. 
+A pot is used to set the specific voltage at a given step, and then
+this gets combined with a gate signal that is typically used to
+trigger some sort of an envelope. This means that the modular style
+sequencer's output is usually routed to two sources. 
+</p>
 </div>
-<div id="outline-container-orgcb97665" class="outline-4">
-<h4 id="orgcb97665"><span class="section-number-4">5.2.2</span> FM</h4>
 </div>
-<div id="outline-container-orga490f90" class="outline-4">
-<h4 id="orga490f90"><span class="section-number-4">5.2.3</span> AM</h4>
+
+<div id="outline-container-org5b8ab74" class="outline-4">
+<h4 id="org5b8ab74"><span class="section-number-4">5.2.2</span> DAW Style</h4>
+<div class="outline-text-4" id="text-5-2-2">
+<p>
+The "piano roll" is one of the most common ways to sequence in a daw,
+basically this is a graphic user interface that maps an image of a
+piano keyboard on to the screen and the user basically drops in notes
+where they would like them to sound. Sequences can typically be of
+variable length.
+</p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org7ede6e9" class="outline-2">
-<h2 id="org7ede6e9"><span class="section-number-2">6</span> Parametric Design</h2>
+
+<div id="outline-container-org1899a16" class="outline-3">
+<h3 id="org1899a16"><span class="section-number-3">5.3</span> Quantization</h3>
+<div class="outline-text-3" id="text-5-3">
+</div>
+<div id="outline-container-orgfeeac1b" class="outline-4">
+<h4 id="orgfeeac1b"><span class="section-number-4">5.3.1</span> Pitch Quantization</h4>
+<div class="outline-text-4" id="text-5-3-1">
+<p>
+Oscillators are outputting an audio signal, the pitch control is
+enabling control over what frequencies are being put out. For all
+intents and purposes this control enables continuous access to all
+pitches along the frequency spectrum. If we don't impose any rounding
+on these values as they come out of the oscillator, we refer to the
+audio signal as unquantized. 
+</p>
+
+<p>
+Although obviously it can be applied to pitch very effectively,
+quantization steps can be applied to "CV" signals also. This means
+that you can basically run a control signal through a quantizer in
+order to "whip it into shape" before passing it to the CV input of an
+oscillator. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd353dd3" class="outline-4">
+<h4 id="orgd353dd3"><span class="section-number-4">5.3.2</span> Offsets &amp; Harmonization</h4>
+<div class="outline-text-4" id="text-5-3-2">
+<p>
+While we're on the topic of quantization, another cool thing that you
+can do with quantizers is to use them in combination with some
+offsets. 
+Basically, you can take a single cv signal and pass it through an
+offset/attenuator in order to change the range and amplitude of the
+signal. If you pass the offset signal back into a quantizer tuned to
+the same pitches as your second signal, you get instant access to
+diatonic or tonal harmonization. 
+</p>
+
+<p>
+One further interesting thing to try out is to further mix the offset
+signal with another signal coming from an LFO. This quickly gives rise
+to many variations on the original seuqence, as it is harder to
+predict exactly how the sequences are related to one another.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org02d348e" class="outline-4">
+<h4 id="org02d348e"><span class="section-number-4">5.3.3</span> Clock Subdivision</h4>
+<div class="outline-text-4" id="text-5-3-3">
+<p>
+In order to have a bit more control over what's coming out of the
+quantizer, it's often useful to use a clock multiplier/divider to
+create a rhythmical relation to the amplitude envelope of your second
+signal. 
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org3f095a3" class="outline-2">
+<h2 id="org3f095a3"><span class="section-number-2">6</span> Troubleshooting</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-org1b0eb0e" class="outline-3">
-<h3 id="org1b0eb0e"><span class="section-number-3">6.1</span> A grammar for electronic music</h3>
+<div id="outline-container-orgf345442" class="outline-3">
+<h3 id="orgf345442"><span class="section-number-3">6.1</span> Patch description</h3>
+<div class="outline-text-3" id="text-6-1">
+<ul class="org-ul">
+<li>We're sending noise to a filter</li>
+<li>Want to control the filtercutoff with a keyboard</li>
+<li>We want a pitched noise output</li>
+</ul>
+</div>
 </div>
 </div>
 
-<div id="outline-container-org3ed8b8b" class="outline-2">
-<h2 id="org3ed8b8b"><span class="section-number-2">7</span> DSP</h2>
+<div id="outline-container-org2be6a2a" class="outline-2">
+<h2 id="org2be6a2a"><span class="section-number-2">7</span> Modulation</h2>
 <div class="outline-text-2" id="text-7">
 </div>
-<div id="outline-container-orgb0cfae0" class="outline-3">
-<h3 id="orgb0cfae0"><span class="section-number-3">7.1</span> Sampling</h3>
+<div id="outline-container-org21f0b55" class="outline-3">
+<h3 id="org21f0b55"><span class="section-number-3">7.1</span> Sub-Audio Rate Modulation</h3>
+<div class="outline-text-3" id="text-7-1">
 </div>
-<div id="outline-container-org14d8f4d" class="outline-3">
-<h3 id="org14d8f4d"><span class="section-number-3">7.2</span> Effects</h3>
+<div id="outline-container-orgcd615e6" class="outline-4">
+<h4 id="orgcd615e6"><span class="section-number-4">7.1.1</span> Definition</h4>
+<div class="outline-text-4" id="text-7-1-1">
+<p>
+When we're taking about modulation, typically we differentiate between
+two different types of signal that are involved:
+</p>
+
+<ul class="org-ul">
+<li>the <b>carrier</b> is basically considered the basis for the modulation,
+the tone that gets manipulated or that "carries" the modulator</li>
+<li>the <b>program or modulator</b> is the signal that is causing some sort of
+periodic fluctuations to the carrier</li>
+</ul>
+
+<p>
+If you're using a Low Frequence Oscillator to some how "animate" the
+signal on it's way to becoming audio, you can pretty much consider
+this sub-audio rate modulation. As we've mentioned before, anything
+that occurs below 15hz is below the threshhold for what humans can
+perceive as pitch and so instead we typically here it as rhythm. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga6a4ef1" class="outline-4">
+<h4 id="orga6a4ef1"><span class="section-number-4">7.1.2</span> Amplitude Modulation (AM)</h4>
+<div class="outline-text-4" id="text-7-1-2">
+<p>
+If we're using an lfo to do amplitude modulation, then we are
+typically mixing together the signal coming from an LFO with the
+transient that is creating our envelope. This produces a kind of
+"amplitude vibrato" where the volume of the tone seems to flutter. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc0965fa" class="outline-4">
+<h4 id="orgc0965fa"><span class="section-number-4">7.1.3</span> Frequency Modulation (FM)</h4>
+<div class="outline-text-4" id="text-7-1-3">
+<p>
+If the carrier is applied to the FM input of the modulator, then the
+audible effects resemble that of a tremolo between two distinct
+pitches.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf40633f" class="outline-3">
+<h3 id="orgf40633f"><span class="section-number-3">7.2</span> Audio Rate Modulation</h3>
 <div class="outline-text-3" id="text-7-2">
 </div>
-<div id="outline-container-orgbdc5fbc" class="outline-4">
-<h4 id="orgbdc5fbc"><span class="section-number-4">7.2.1</span> Delay</h4>
+<div id="outline-container-org920c205" class="outline-4">
+<h4 id="org920c205"><span class="section-number-4">7.2.1</span> Side bands and Timbre</h4>
 </div>
-<div id="outline-container-org03d3a81" class="outline-4">
-<h4 id="org03d3a81"><span class="section-number-4">7.2.2</span> Reverb</h4>
+<div id="outline-container-org29a8127" class="outline-4">
+<h4 id="org29a8127"><span class="section-number-4">7.2.2</span> FM</h4>
+</div>
+<div id="outline-container-org3558fbf" class="outline-4">
+<h4 id="org3558fbf"><span class="section-number-4">7.2.3</span> AM</h4>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org54deafd" class="outline-2">
-<h2 id="org54deafd"><span class="section-number-2">8</span> Advanced Synthesis Techniques</h2>
+
+
+<div id="outline-container-orga94f6a9" class="outline-2">
+<h2 id="orga94f6a9"><span class="section-number-2">8</span> Sound Synthesis</h2>
 <div class="outline-text-2" id="text-8">
+<p>
+The following is a cherry-pick and very brief exposition of a couple
+of topics related to an area of sound synthesis that I've found
+personally interesting over the years. These topics are all covered in
+excellent detail in Gareth Loy's book Musimathics vol. II. 
+</p>
 </div>
-<div id="outline-container-org77ca062" class="outline-3">
-<h3 id="org77ca062"><span class="section-number-3">8.1</span> Physical Modelling</h3>
+
+<div id="outline-container-org601a6b7" class="outline-3">
+<h3 id="org601a6b7"><span class="section-number-3">8.1</span> Delay Lines</h3>
+<div class="outline-text-3" id="text-8-1">
+<p>
+Following on from the books disucssion, here are two ways to implement
+a delay line. Although we haven't been worrying about the details of
+implementation throughout this course, it's not a bad idea to
+occasionally point to one or two as if we are serious scholars. As an
+aside, I once submitted PhD application to Trinity College Dublin with
+the glorious notion of writing my dissertation on "something about
+time". If nothing else, this brief discussion of exactly what a delay
+is might serve as a reminder that all of this music stuff seems to
+have something or other to do with time.
+</p>
+</div>
+
+<div id="outline-container-org0bb0e67" class="outline-4">
+<h4 id="org0bb0e67"><span class="section-number-4">8.1.1</span> Mexican Wave</h4>
+<div class="outline-text-4" id="text-8-1-1">
+<p>
+(The actual example in the book is Bucket Brigate, but I've always
+been a big personal fan of the mexican wave). Imagine that the year is
+</p>
+<ol class="org-ol">
+<li>The FIFA world cup is on and you have tickets to the final where</li>
+</ol>
+<p>
+Argentina play against West Germany. At different points during the
+match, the crown begins "passing a wave" around the stadium. The idea
+is that the peak of the wave is passed by one section of the crowd
+standing up and then returning to their seats as the peak moves to the
+next acjacent section.
+<a href="https://en.wikipedia.org/wiki/File:AUSvIRE4Wave.ogv">https://en.wikipedia.org/wiki/File:AUSvIRE4Wave.ogv</a>
+</p>
+
+<p>
+For the Bucket Brigade or Mexican Wave analogy to work, you have to
+put yourself in the position of imagining that you are the peak of the
+wave travelling around the stadium, you are essentially being passed
+from one section of the crowd to the next.
+</p>
+
+<p>
+To bring the anology a bit closer to the computer, imagine the
+sections of the crowd as an array of samples, each time the "wave"
+passes along the array, a sample is moved from one index to the next,
+or from the input stack to the output stack along a FIFO (first in
+first out) queue. This is not to be confused with FIFA of course,
+which stands for the Fédération Internationale de Football Association.
+</p>
 </div>
 </div>
 
-<div id="outline-container-orgc0f962c" class="outline-2">
-<h2 id="orgc0f962c"><span class="section-number-2">9</span> Project work</h2>
+<div id="outline-container-org80195ff" class="outline-4">
+<h4 id="org80195ff"><span class="section-number-4">8.1.2</span> In-place method</h4>
+<div class="outline-text-4" id="text-8-1-2">
+<p>
+The inplace method is the same as above, there is a queue and an input
+and output stack, but this time for the analogy you have to imagine
+yourself as an individual in the crowd. You experience the peak of the
+wave when it passes, and then you have to sit and wait again for n
+seconds for the wave to come around a second time.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgff769f1" class="outline-4">
+<h4 id="orgff769f1"><span class="section-number-4">8.1.3</span> Echo modelling</h4>
+<div class="outline-text-4" id="text-8-1-3">
+<p>
+Imagine a signal path: 
+</p>
+<div class="org-src-container">
+<pre class="src src-artist">
+(sound source) -&gt; [ADC] -&gt; [---delay---] -&gt; [DAC] -&gt; |) 
+
+</pre>
+</div>
+
+<p>
+If you place a delay module in the signal path and that delays the 
+sound by <i>N</i> samples. The sound will arrive at the output <i>N</i> seconds
+after the sound has left the input.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcf3f31b" class="outline-4">
+<h4 id="orgcf3f31b"><span class="section-number-4">8.1.4</span> Screaming into a cave</h4>
+<div class="outline-text-4" id="text-8-1-4">
+<p>
+At one time or another, we've all screamed into a cave. Not the empty
+cave of our dreams, but a real physical cave with damp, stalactites
+and formerly bears. You may recall that the echo that you hear
+dissipates on it's return. Well, this dissipation is something that we
+can try to model with our syntehsis system in order to recreate an
+accurate sounding audible delay. 
+</p>
+
+<p>
+In real world acoustical situations (i.e. a room full of air) the
+pressure of a transverse, spherical waveform drops off at 1/d. That is
+to say the amplitude decreases as the delay time increases. 
+</p>
+
+<p>
+If the delay line is <i>N</i> samples and <i>T</i> seconds long, it's possible
+to model the attenuation of a pressure wave by setting a = 1/(<i>NT</i>)
+Intesity (perceived loudness) drops off as d<sup>2</sup>, so we can write 
+a = 1/(<i>NT</i>)<sup>2</sup>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org98efea8" class="outline-4">
+<h4 id="org98efea8"><span class="section-number-4">8.1.5</span> Mercilessly skipping ahead to some sound examples</h4>
+<div class="outline-text-4" id="text-8-1-5">
+<p>
+Okay, so real physical situations are a bit more complicated that this
+simple model. Typically if there is a sound source playing in a room,
+the room will give back many more reflections than the sound
+source. This is also true for the bodies of instruments, where tiny
+reflections can give a specific violin, cello, guitar, drum, marimba,
+its own very distinctive quality. There is a whole area of synthesis
+research known as physical modelling, where the various types of delay
+networks are compiled to create many interesting sounds. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9aac35a" class="outline-3">
+<h3 id="org9aac35a"><span class="section-number-3">8.2</span> Karplus strong</h3>
+<div class="outline-text-3" id="text-8-2">
+<p>
+Physical modelling synthesis sort of begins though in a very simple
+way, with a type of algorithm known as karplus strong. It's very
+simple infact, all you need is a noise source, an amplifier, a vca and
+an output. By modulating aspects of the delay time and feedback, you
+can recreate the sound of a pitched string.
+</p>
+
+<p>
+I've created a patch called "karplus-really-Strong.vcv" to demonstrate
+some of the tecniques mentioned above.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc243089" class="outline-2">
+<h2 id="orgc243089"><span class="section-number-2">9</span> Project work</h2>
 <div class="outline-text-2" id="text-9">
 </div>
-<div id="outline-container-orgaa87546" class="outline-3">
-<h3 id="orgaa87546"><span class="section-number-3">9.1</span> in a DAW</h3>
+<div id="outline-container-org6ec76ad" class="outline-3">
+<h3 id="org6ec76ad"><span class="section-number-3">9.1</span> in a DAW</h3>
 </div>
-<div id="outline-container-org1299a3d" class="outline-3">
-<h3 id="org1299a3d"><span class="section-number-3">9.2</span> Voice Assignment</h3>
+<div id="outline-container-org5b100aa" class="outline-3">
+<h3 id="org5b100aa"><span class="section-number-3">9.2</span> Voice Assignment</h3>
 </div>
 
-<div id="outline-container-orgd69dc36" class="outline-3">
-<h3 id="orgd69dc36"><span class="section-number-3">9.3</span> Appendix A</h3>
+<div id="outline-container-orgaf2877e" class="outline-3">
+<h3 id="orgaf2877e"><span class="section-number-3">9.3</span> Appendix A</h3>
 <div class="outline-text-3" id="text-9-3">
 </div>
-<div id="outline-container-orga2dd102" class="outline-4">
-<h4 id="orga2dd102"><span class="section-number-4">9.3.1</span> Program selection, installation and directory structure</h4>
+<div id="outline-container-orgc2fd041" class="outline-4">
+<h4 id="orgc2fd041"><span class="section-number-4">9.3.1</span> Program selection, installation and directory structure</h4>
 </div>
-<div id="outline-container-org944c9e7" class="outline-4">
-<h4 id="org944c9e7"><span class="section-number-4">9.3.2</span> Project organisation in Digital Audio Workstations</h4>
+<div id="outline-container-orgb2a5ab6" class="outline-4">
+<h4 id="orgb2a5ab6"><span class="section-number-4">9.3.2</span> Project organisation in Digital Audio Workstations</h4>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2020-10-09 Fri 10:03</p>
+<p class="date">Created: 2021-01-08 Fri 09:57</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
